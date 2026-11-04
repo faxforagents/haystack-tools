@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+dist/
+.coding-agent/uv-cache/
+.coding-agent/tmp/
+.coding-agent/verify-venv/
+.env
+.env.*
+.coding-agent/python/
+.coding-agent/bin/
+.coding-agent/py310/
+.coding-agent/
