@@ -7,4 +7,9 @@ updates:
     schedule: { interval: weekly, day: monday }
     groups:
       pip-minor:
+    ignore:
+      # haystack-ai 3 moves ToolInvoker out of haystack.components.tools and changes what haystack.tools
+      # exports. The package needs a port for it, not a wider cap (PR 3, tested 2026-11-09).
+      - dependency-name: "haystack-ai"
+        update-types: ["version-update:semver-major"]
         update-types: [minor, patch]
