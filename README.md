@@ -13,6 +13,7 @@
   <a href="https://faxforagents.com/docs/sdks/">SDKs</a> ·
   <a href="https://faxforagents.com/mcp/">MCP</a> ·
   <a href="https://app.faxforagents.com">Dashboard</a> ·
+  <a href="https://faxforagents.com/pricing/">Pricing</a> ·
   <a href="https://faxforagents.com/changelog/">Changelog</a>
 </p>
 
@@ -36,7 +37,7 @@ uv sync
 
 The distribution is `faxforagents-haystack`. The import is `faxforagents_haystack`.
 Python 3.10 or later and Haystack `>=2.31.1,<3` are required.
-The SDK dependency is `faxforagents>=0.2.3,<0.3`.
+The SDK dependency is `faxforagents>=0.2.3,<0.5`.
 
 ## Offline Agent example
 
