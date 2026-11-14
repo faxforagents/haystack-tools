@@ -16,7 +16,7 @@ version: Haystack 2.0
 
 ## Overview
 
-Fax for Agents provides 15 tools for preparing documents, requesting quotes, sending approved faxes, and reading received documents.
+Fax for Agents provides 17 tools for preparing documents, requesting quotes, sending approved faxes, asking a person to pay by card, and reading received documents.
 `FaxForAgentsToolset` works with Haystack `Agent` and `ToolInvoker`.
 Python 3.10 or later and `haystack-ai>=2.31.1,<3` are required.
 
