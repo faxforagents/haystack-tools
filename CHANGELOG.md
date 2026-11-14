@@ -23,7 +23,7 @@ The tests pass against SDK 0.2.3, 0.4.0, 0.5.0 and 0.6.0. The lock file uses 0.6
 
 ## 0.1.0
 
-Prepared on 2026-11-04. Unpublished.
+Prepared and published to PyPI on 2026-11-04.
 
 - Add 15 canonical Fax for Agents tools and `FaxForAgentsToolset`.
 - Require sandbox credentials by default and approval IDs for live sends.

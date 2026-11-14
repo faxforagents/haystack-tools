@@ -28,9 +28,11 @@
 
 Use 17 Haystack tools through the [Fax for Agents Python SDK](https://github.com/faxforagents/sdk-python).
 Fax for Agents is made by JSB Holdings LLC.
-This package has not been published.
+This README describes version 0.2.0.
+[PyPI](https://pypi.org/project/faxforagents-haystack/) had version 0.1.0 on 2026-11-14, with 15 tools and an SDK range below 0.3.
+Check there for the current release.
 
-Install the local checkout.
+Install the local checkout to use this version before its release.
 
 ```bash
 uv sync
