@@ -66,12 +66,15 @@ Sandbox mode is enabled by default and requires an `ffa_test_` credential before
 The sandbox destination `+15550000001` simulates delivery without contacting a carrier.
 
 ```python
+import uuid
+
 from faxforagents_haystack import FaxForAgentsToolset
 
+run = uuid.uuid4().hex[:8]  # new idempotency keys on every run
 tools = {tool.name: tool for tool in FaxForAgentsToolset()}
 prepared = tools["prepare_fax"].invoke(
     text="Sandbox test document.",
-    idempotency_key="sandbox-document-001",
+    idempotency_key=f"sandbox-document-{run}",
 )
 if not prepared["ok"]:
     raise RuntimeError(prepared["error_code"])
@@ -79,14 +82,15 @@ if not prepared["ok"]:
 quoted = tools["quote_fax"].invoke(
     document_id=prepared["data"]["result"]["id"],
     to="+15550000001",
-    idempotency_key="sandbox-quote-001",
+    idempotency_key=f"sandbox-quote-{run}",
 )
 if not quoted["ok"]:
     raise RuntimeError(quoted["error_code"])
 print(quoted["data"]["result"])
 ```
 
-Persist an operation's idempotency key before its first call.
+The sample makes new keys on each run, so it can be run again.
+In your own code, persist an operation's idempotency key before its first call.
 Reuse the same key and payload when retrying that operation.
 Use new keys for changed content or destinations.
 Every mutation requires a caller key, including document creation, quotes, review requests, cancellation, and extraction.
