@@ -19,6 +19,8 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/faxforagents/haystack-tools/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/faxforagents/haystack-tools/ci.yml?branch=main&label=ci" alt="CI"></a>
+
   <a href="LICENSE"><img src="https://img.shields.io/badge/licence-MIT-1f6feb" alt="MIT licence"></a>
 
   <a href="https://www.python.org"><img src="https://img.shields.io/badge/python-3.10%2B-3776ab" alt="Python 3.10 or later"></a>
@@ -234,6 +236,7 @@ uv run mypy
 uv build
 ```
 
+CI runs these checks with Python 3.10 and 3.14 on every push to main and on each pull request.
 Tests use fake SDK resources and mocked HTTP responses.
 They cover validation, approvals, idempotency, untrusted data, serialization, ToolInvoker execution, and the offline Agent.
 No live fax is sent during verification.
